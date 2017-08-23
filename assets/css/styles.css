@@ -126,6 +126,7 @@ iframe {
 }
 .header .profile-image {
   margin-right: 30px;
+  height: 130px;
 }
 .header .profile-content .name {
   color: #49515a;
@@ -134,9 +135,9 @@ iframe {
   margin-top: 30px;
 }
 .header .profile-content .desc {
-  color: #778492;
-  font-family: "Lato", arial, sans-serif;
-  font-weight: 400;
+  color: #49515a;
+  /*! font-family: "Lato", arial, sans-serif; */
+  font-weight: 700;
   font-size: 24px;
   margin-top: 0;
   margin-bottom: 15px;
@@ -186,6 +187,20 @@ iframe {
   margin-right: 5px;
   font-size: 14px;
 }
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
 /* About Section */
 /* Latest Section */
 .latest .item {
@@ -206,9 +221,9 @@ iframe {
   color: #5f6b77;
 }
 .latest .item .project-image:hover {
-  -webkit-opacity: 0.8;
+  /* -webkit-opacity: 0.8; */
   -moz-opacity: 0.8;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 .latest .divider {
   margin-bottom: 60px;
@@ -221,7 +236,7 @@ iframe {
   font-size: 20px;
 }
 .latest .featured .summary {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #778492;
 }
 .latest .featured img {
@@ -382,6 +397,46 @@ iframe {
 .skills .skillset .level-bar-inner {
   height: 15px;
   background: #66cb8c;
+}
+input[id^="spoiler"]{
+ display: none;
+}
+input[id^="spoiler"] + label {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background: #479FC8;
+  border: 1px solid #479FC8;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .6s;
+}
+input[id^="spoiler"]:hover + label {
+  color: #fff;
+  background: #3893bd;
+  font-weight: 600;
+}
+input[id^="spoiler"] ~ .spoiler {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-bottom: 20px;
+  padding: 15px; 
+  color: #31708f;
+  background: #d9edf7;
+  border: 1px solid #bce8f1;
+  border-radius: 4px;
+  transition: all .6s;
+}
+input[id^="spoiler"]:checked + label + .spoiler{
+  height: auto;
+  opacity: 1;
+  padding: 15px;
 }
 /* Testimonials section */
 .testimonials .item {
